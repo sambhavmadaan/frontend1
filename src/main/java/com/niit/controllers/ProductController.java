@@ -71,7 +71,7 @@ public class ProductController {
 		Product product1=new Product();
 		m.addAttribute(product1);
 		//Multipart file uploading
-		String path="C:\\Users\\Dell\\Downloads\\frontend-master\\src\\main\\webapp\\resources\\images1\\";
+		String path="C:\\Users\\Dell\\Downloads\\frontend-master\\src\\main\\webapp\\resources\\images1\\product\\";
 		path=path+String.valueOf(product.getProdId())+".jpg";
 		
 		File file=new File(path);      //create a blank file  where content can be written
@@ -145,7 +145,7 @@ public class ProductController {
 		//m.addAttribute("categoryList",this.getCategories());
 		
 		//Multipart file uploading
-				String path="C:\\Users\\Dell\\Downloads\\frontend-master\\src\\main\\webapp\\resources";
+				String path="C:\\Users\\Dell\\Downloads\\frontend-master\\src\\main\\webapp\\resources\\images1\\product\\";
 				path=path+String.valueOf(product.getProdId())+".jpg";
 				
 				File file=new File(path);      //create a blank file  where content can be written

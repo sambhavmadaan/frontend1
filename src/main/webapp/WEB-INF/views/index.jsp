@@ -10,13 +10,13 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body  {
+/* body  {
    background: url("resources/images1/background4.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
 } 
-
+ */
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
@@ -163,14 +163,14 @@ body  {
         <div class="row">
           <div class="col-lg-6">
             <img class="rounded-circle" src="resources/images1/menwatch.jpg" alt="Generic placeholder image" width="200" height="200">
-            <h2><font color="white">Men</font></h2>
-            <p><font color="white">Men's watches are often worn as style adornments. Whether you are an office goer, a college going teenager or an established man, you cannot deny the satisfaction you get after donning the attractive timepiece on your wrist. Choose a strap material based on your comfort and one that complements your skin tone.</font></p>
+            <h2>Men</h2>
+            <p>Men's watches are often worn as style adornments. Whether you are an office goer, a college going teenager or an established man, you cannot deny the satisfaction you get after donning the attractive timepiece on your wrist. Choose a strap material based on your comfort and one that complements your skin tone.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View more &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-6">
             <img class="rounded-circle" src="resources/images1/women.jpg" alt="Generic placeholder image" width="200" height="200">
-            <h2><font color="white">WoMen</font></h2>
-            <p><font color="white">Women's watches with fabric, synthetic and plastic straps are meant to be worn as decorative watches. The straps with attractive designs add panache to your attire. Silver timepieces go well with any outfit. And when it comes to style, you can opt from elegant bracelet style timepieces</font></p>
+            <h2>WoMen</h2>
+            <p>Women's watches with fabric, synthetic and plastic straps are meant to be worn as decorative watches. The straps with attractive designs add panache to your attire. Silver timepieces go well with any outfit. And when it comes to style, you can opt from elegant bracelet style timepieces</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
     </div>
@@ -181,8 +181,8 @@ body  {
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><font color="white"><b>Smart </b></font><span class="text-muted"><font color="white">Watches</font></span></h2>
-            <p class="lead"><font color="white">A smartwatch is a touchscreen wearable computer in the form of a wristwatch. Some smartwatches function as portable media players, with FM radio and playback of digital audio and video files via a Bluetooth or USB headset.</font></p>
+            <h2 class="featurette-heading"><b>Smart </b><span class="text-muted"><font color="white">Watches</font></span></h2>
+            <p class="lead">A smartwatch is a touchscreen wearable computer in the form of a wristwatch. Some smartwatches function as portable media players, with FM radio and playback of digital audio and video files via a Bluetooth or USB headset.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="resources/images1/smartwatch1.jpg" alt="Generic placeholder image" >
@@ -193,8 +193,8 @@ body  {
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading"><font color="white"><b>Digital </b></font><span class="text-muted"><font color="white">Watches</font></span></h2>
-            <p class="lead"><font color="white">A digital clock is a type of clock that displays the time digitally (i.e. in numerals or other symbols), as opposed to an analog clock, where the time is indicated by the positions of rotating hands.</font></p>
+            <h2 class="featurette-heading">Digital <span class="text-muted">Watches</span></h2>
+            <p class="lead">A digital clock is a type of clock that displays the time digitally (i.e. in numerals or other symbols), as opposed to an analog clock, where the time is indicated by the positions of rotating hands.</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" src="resources/images1/digital.jpg" alt="Generic placeholder image">
@@ -205,8 +205,8 @@ body  {
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><font color="white"><b>Evergreen </b></font><span class="text-muted"><font color="white">Analog</font></span></h2>
-            <p class="lead"><font color="white">An analog watch is a watch whose display is not digital but rather analog with a traditional clock face. The name is an example of a retronym; it was coined to distinguish analog watches, which had simply been called "watches", from newer digital watches.</font></p>
+            <h2 class="featurette-heading">Evergreen <span class="text-muted">Analog</span></h2>
+            <p class="lead">An analog watch is a watch whose display is not digital but rather analog with a traditional clock face. The name is an example of a retronym; it was coined to distinguish analog watches, which had simply been called "watches", from newer digital watches.</p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="resources/images1/analog.jpg" alt="Generic placeholder image">
@@ -219,7 +219,7 @@ body  {
 
       </div><!-- /.container -->
       <center>
-      <h2 class="featurette-heading"><font color="white">Our Top </font><span class="text-muted"><font color="white"><b>Brands</b></font></span></h2>
+      <h2 class="featurette-heading">Our Top <span class="text-muted">Brands</span></h2>
       </center>
       <br><br><br>
 	  <div class="container marketing">

@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html" %>
-<%-- <%@include file="Header.jsp" %> --%>
 <%@include file="Admin.jsp" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <title>Supplier </title>
 <body>
-<br><br><br><br><br>
-<br><br><br><br><br>
+<!-- <br><br><br><br><br>
+ --><!-- <br><br><br><br><br> -->
 
 <c:if test="${flag}">
-<form action="<c:url value="/updateSupplier"/>" method="post">
+<form action="<c:url value="/updateSupplier"/>" method="post" enctype="multipart/form-data">
 <table> 
 	<tr>
 		<td>Supplier Id</td>
@@ -24,31 +23,9 @@
 		<td><input type="text" name="supaddr" value="${supplierData.supAddr}"/></td>
 	</tr>
 	
-	<tr>
-		<td colspan="2">
-			<center>
-			<input type="submit" value="SUBMIT"/>
-			</center>
-		</td>
+	<td>Supplier Image</td>
+		<td><input type="file" name="simage"/></td>
 	</tr>
-	
-</table>
-
-</c:if>
-<c:if test="${!flag}">
-<form action="InsertSupplier" method="post">
-
-<table m.addAttribute("flag",flag);> 
-	<tr>
-		<td>Supplier Name</td>
-		<td><input type="text" name="supname"/></td>
-	</tr>
-	
-	<tr>
-		<td>Supplier Address</td>
-		<td><input type="text" name="supaddr"></td>
-	</tr>
-	
 	<tr>
 		<td colspan="2">
 			<center>
@@ -60,19 +37,62 @@
 </table>
 </form>
 
-<table align="center">
-	<tr bgcolor="pink">
-		<td>Supplier Id</td>
+</c:if>
+<c:if test="${!flag}">
+<form action="InsertSupplier" method="post" enctype="multipart/form-data">
+
+<table m.addAttribute("flag",flag); align="center" cellspacing="3" class="table">
+ <tr bgcolor="pink">
+ 	<td colspan="2"><center><b>Manage Suppliers</b></center></td>
+ </tr> 
+	<tr>
 		<td>Supplier Name</td>
-		<td>Supplier Address</td>
-		<td>Operation</td>
+		<td><input type="text" name="supname"/></td>
 	</tr>
+	
+	<tr>
+		<td>Supplier Address</td>
+		<td><input type="text" name="supaddr"></td>
+	</tr>
+	
+	<td>Supplier Image</td>
+		<td><input type="file" name="simage"/></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<center>
+			<input type="submit" value="SUBMIT"/>
+			</center>
+		</td>
+	</tr>
+	
+</table>
+</form>
+
+<div class="container">
+ 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Supplier Id</th>
+        <th>Supplier Name</th>
+        <th>Supplier Address</th>
+        <th>Supplier Image</th>
+        <th>Operation</th>
+ 		       
+        
+      </tr>
+    </thead>
+
+</div>
+
 	
 	<c:forEach items="${supplierlist}" var="supplier">
 	<tr>
 		<td>${supplier.suppId}</td>
 		<td>${supplier.supName}</td>
 		<td>${supplier.supAddr}</td>
+		<td><img height="80" width="80" src="/frontend/resources/images1/supplier/${supplier.suppId}.jpg"></td>
 	
 		<td>
 			<a href="<c:url value='/deleteSupplier/${supplier.suppId}'/>">Delete</a>

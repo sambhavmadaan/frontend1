@@ -2,8 +2,10 @@
 <head>
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%-- <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%> --%>
 <%@include file="/WEB-INF/views/Footer.jsp" %>
 
+	
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -48,7 +50,8 @@ code {
  </head>
 
   <body>
-
+   <nav class="navbar navbar-light" style="background-color: #ff0000;">
+   </nav>
     <nav class="navbar navbar-expand-md ">
       <a class="navbar-brand" href="<c:url value='/home'/>"><u>theWatchStore</u><font color="red">.</font></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,18 +66,28 @@ code {
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/aboutus'/>">AboutUs</a>
           </li>
+          <security:authorize access="isAnonymous()">
           <li class="nav-item">
-            <a class="nav-link" href="<c:url value='/login'/>">Login </a>
+            <a class="nav-link" href="<c:url value='/login1'/>">Login </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/register'/>">Register</a>
           </li>
+          </security:authorize>
            <li class="nav-item">
             <a class="nav-link" href="<c:url value='/admin'/>">Admin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/contactus'/>">Contact Us</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<c:url value='/displayProduct'/>">Display Product</a>
+          </li>
+          <security:authorize access="isAuthenticated()">
+      	<li class="nav-item">
+            <a class="nav-link" href="<c:url value='/logout'/>">Logout</a>
+          </li>
+      </security:authorize>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">

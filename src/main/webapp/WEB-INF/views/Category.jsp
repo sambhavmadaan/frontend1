@@ -1,21 +1,14 @@
+<%@include file="Admin.jsp" %>
 <%@ page language="java" contentType="text/html" %>
 <%-- <%@include file="Header.jsp" %> --%>
-<%@include file="Admin.jsp" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <title>Category </title>
 <body>
-<br><br><br><br><br><br>
 <c:if test="${flag}">
-<div class="container ">
 
-    <div class="row" align="center">
-    
-     <div class="col-md-6">
-            <div class="well well-sm">
-
-<form action="<c:url value="/updateCategory"/>" method="post">
-<table> 
+<form action="<c:url value="/updateCategory"/>" method="post" enctype="multipart/form-data">
+ <table>
 	<tr>
 		<td>Category Id</td>
 		<td><input type="text" name="catId" value="${categoryData.categoryId}"readonly/></td>
@@ -28,7 +21,9 @@
 		<td>Category Decription</td>
 		<td><input type="text" name="catDesc" value="${categoryData.categoryDesc}"/></td>
 	</tr>
-	
+	<td>Category Image</td>
+		<td><input type="file" name="cimage"/></td>
+	</tr>
 	<tr>
 		<td colspan="2">
 			<center>
@@ -38,16 +33,18 @@
 	</tr>
 	
 </table>
-</form>
-</div>
-</div>
-</div>
-</div>
+
+ </form>
 </c:if>
 <c:if test="${!flag}">
-<form action="InsertCatgory" method="post">
+<form action="InsertCatgory" method="post" enctype="multipart/form-data">
 
-<table m.addAttribute("flag",flag);> 
+
+<table m.addAttribute("flag",flag); align="center" cellspacing="3" class="table">
+ <tr bgcolor="pink">
+ 	<td colspan="2"><center><b>Manage Categories</b></center></td>
+ </tr> 
+ 
 	<tr>
 		<td>Category Name</td>
 		<td><input type="text" name="catname"/></td>
@@ -57,7 +54,9 @@
 		<td>Category Decription</td>
 		<td><input type="text" name="catDesc"></td>
 	</tr>
-	
+	<td>Category Image</td>
+		<td><input type="file" name="cimage"/></td>
+	</tr>
 	<tr>
 		<td colspan="2">
 			<center>
@@ -68,20 +67,29 @@
 	
 </table>
 </form>
+<br>
+<hr>
+<div class="container">
+ 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Category Desc</th>
+        <th>Category Image</th>
+        <th>Operation</th>
+      </tr>
+    </thead>
 
-<table align="center">
-	<tr bgcolor="pink">
-		<td>Category Id</td>
-		<td>Category Name</td>
-		<td>Category Desc</td>
-		<td>Operation</td>
-	</tr>
+</div>
 	
 	<c:forEach items="${categorylist}" var="category">
 	<tr>
 		<td>${category.categoryId}</td>
 		<td>${category.categoryName}</td>
 		<td>${category.categoryDesc}</td>
+		<td><img height="80" width="80" src="/frontend/resources/images1/category/${category.categoryId}.jpg"></td>
 		
 		<td>
 			<a href="<c:url value='/deleteCategory/${category.categoryId}'/>">Delete</a>
@@ -93,4 +101,5 @@
 </c:if>
 
 </body>
+</html>
 </html>
