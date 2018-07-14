@@ -1,19 +1,14 @@
 package com.niit.controllers;
 
-import java.util.Collection;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.dao.ProductDAO;
 import com.niit.dao.UserDetailDAO;
@@ -37,6 +32,14 @@ public class UserController {
 		m.addAttribute(userDetail1);*/
 		return "Login1";
 	}
+	@RequestMapping(value="/perform_login")
+	public String loginSuccess(Model m,HttpSession session,@RequestParam("username")String username)
+	{
+		
+		
+	
+		return "redirect:login";
+	}
 	/*@RequestMapping(value="/perform_login")
 	public String loginSuccess(Model m,HttpSession session)
 	{
@@ -47,21 +50,29 @@ public class UserController {
 		String username=authentication.getName();
 		
 		Collection<GrantedAuthority> roles=(Collection<GrantedAuthority>)authentication.getAuthorities();
-		
+		for(GrantedAuthority role:roles) {
+		System.out.print(role);}
+		System.out.print(username);
+	
 		for(GrantedAuthority role:roles) {
 			session.setAttribute("role", role.getAuthority());
-			if(role.getAuthority().equals("User")) {
+			if(role.getAuthority().equals("ROLE_USER")) {
 				loggedin=true;
 				page="index";
 				session.setAttribute("loggedIn", loggedin);
 				session.setAttribute("user name", username);
+				System.out.print(role);
+				System.out.print(username);
 				
 			}
-			else if(role.getAuthority().equals("Admin")) {
+			else if(role.getAuthority().equals("ROLE_ADMIN")) {
 				loggedin=true;
 				page="Admin";
 				session.setAttribute("loggedIn", loggedin);
 				session.setAttribute("user name", username);
+				System.out.print(role);
+				System.out.print(username);
+		
 			}
 			else {
 				loggedin=false;
@@ -72,6 +83,7 @@ public class UserController {
 		}
 		System.out.println("login success");
 		return page;
+*/	
 	}
-*/
-	}
+
+	

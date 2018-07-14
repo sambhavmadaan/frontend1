@@ -2,7 +2,8 @@
 <head>
 <%@ page language="java" contentType="text/html"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<%-- <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%> --%>
+
+ <%-- <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>  --%>
 <%@include file="/WEB-INF/views/Footer.jsp" %>
 
 	
@@ -64,30 +65,45 @@ code {
             <a class="nav-link" href="<c:url value='/home'/>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<c:url value='/aboutus'/>">AboutUs</a>
+            <a class="nav-link" href="<c:url value='/aboutus'/>">AboutUs </a>
           </li>
-          <security:authorize access="isAnonymous()">
+          
+          
+          <c:if test="${pageContext.request.userPrincipal.name==null }">
+          
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/login1'/>">Login </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/register'/>">Register</a>
           </li>
-          </security:authorize>
+          
+          </c:if>
+          
+         
+          <%--  <c:if test="${role=='Admin'}"> --%>
            <li class="nav-item">
             <a class="nav-link" href="<c:url value='/admin'/>">Admin</a>
           </li>
+         <%-- </c:if> --%>
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/contactus'/>">Contact Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<c:url value='/displayProduct'/>">Display Product</a>
           </li>
-          <security:authorize access="isAuthenticated()">
+          
+           <c:if test="${pageContext.request.userPrincipal.name!=null }">
       	<li class="nav-item">
             <a class="nav-link" href="<c:url value='/logout'/>">Logout</a>
           </li>
-      </security:authorize>
+      </c:if>
+      
+      <c:if test="${pageContext.request.userPrincipal.name!=null }">
+           <li class="nav-item">
+            <a class="nav-link">WELCOME:${pageContext.request.userPrincipal.name}</a>
+          </li>
+          </c:if>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">

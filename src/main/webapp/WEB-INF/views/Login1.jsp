@@ -43,7 +43,7 @@ body  {
                 <!-- <form class="form-horizontal" method="post"> -->
                     <fieldset>
                         <legend class="text-center header">Sign In</legend>
-                       <form id="LoginForm" action="login" method="post" class="form-horizontal" role="form">
+                       <form id="LoginForm" action="processing" method="post" class="form-horizontal" role="form">
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <input id="username" name="username" type="text" placeholder="username" class="form-control">
