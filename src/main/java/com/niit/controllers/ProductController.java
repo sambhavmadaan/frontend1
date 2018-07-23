@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,6 +60,9 @@ public class ProductController {
 		Product product=productDAO.getProduct(prodId);
 		m.addAttribute("product",product);
 		m.addAttribute("categoryName", categoryDAO.getCategory(product.getCategoryId()).getCategoryName());
+	//	String username=(String)request.getUserPrincipal().getName();
+		//System.out.println(username);
+	
 		return "TotalProductDisplay";
 		
 	}

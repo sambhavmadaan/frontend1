@@ -54,6 +54,14 @@ span.glyphicon {
 .glyphicon-star:hover { 
     transform: rotate(-15deg) scale(1.3); 
 }
+ .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+    }
+
                                    </style> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
@@ -83,8 +91,8 @@ span.glyphicon {
 						<div class="col-md-12 panelBottom">
 							<div class="col-md-4 text-center">
 								<%-- <button class="btn btn-lg btn-add-to-cart" href="<c:url value='frontend/totalProductInfo/${product.prodId}'/>">View Now! </button> --%> 						
-								
-								<input type="button"class="btn btn-lg btn-add-to-cart" class="btn btn-info" value="View Now!" onclick="location.href = 'totalProductInfo/${product.prodId}';">
+<!-- 								  <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+ -->								<input type="button"class="btn btn-primary btn-lg" class="btn btn-info" value="View Now!" onclick="location.href = 'totalProductInfo/${product.prodId}';">
 							</div>
 							<div class="col-md-4 text-left">
 								 <span class="itemPrice">&#8377; ${product.price}</span></h5>

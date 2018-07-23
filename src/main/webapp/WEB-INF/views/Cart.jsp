@@ -14,11 +14,11 @@
 	<td>Total Price</td>
 	<td>Operation</td>
 </tr>
-<%-- <c:if test="${empty cartItems}">
+ <c:if test="${empty cartItems}">
 <tr><td colspan="6" ><center>Your Cart is Empty.</center>
-</c:if>
- --%> 
- <%-- <c:if test="${not empty cartItems}"> --%>
+</td></tr></c:if>
+ 
+ <c:if test="${not empty cartItems}">
  
 <c:forEach items="${cartItems}" var="cartItem">
 <form action="<c:url value="/updateCartItem/${cartItem.cartItemId}"/>" method="get">
@@ -36,6 +36,7 @@
 </tr>
 </form>
 </c:forEach>
+
 <tr>
 	<td colspan="4">Total Purchase Amount</td>
 	<td>${totalPurchaseAmount}</td>
@@ -44,6 +45,6 @@
 	<td colspan="3"><a href="<c:url value="/continueShopping"/>" class=btn-btn-info>Continue Shopping</a></td>
 	<td colspan="3"><a href="<c:url value="/checkout"/>" class=btn-btn-info>Checkout</a></td>
 		</tr>
-		<%-- </c:if>  --%>
+		</c:if>
 </table>
 </div>

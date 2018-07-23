@@ -6,12 +6,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
  -->
 <style>
-body  {
+/* body  {
    background: url("resources/images1/background4.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
-} 
+}  */
 
     .map {
         min-width: 100px;

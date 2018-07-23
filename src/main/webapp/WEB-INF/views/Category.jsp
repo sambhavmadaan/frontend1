@@ -1,8 +1,14 @@
+<head>
 <%@include file="Admin.jsp" %>
 <%@ page language="java" contentType="text/html" %>
 <%-- <%@include file="Header.jsp" %> --%>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
+
+
+
+</head>
 <title>Category </title>
 <body>
 <c:if test="${flag}">
@@ -27,7 +33,7 @@
 	<tr>
 		<td colspan="2">
 			<center>
-			<input type="submit" value="SUBMIT"/>
+			<button type="submit" class="btn btn-primary btn-lg">Save</button>
 			</center>
 		</td>
 	</tr>
@@ -37,12 +43,15 @@
  </form>
 </c:if>
 <c:if test="${!flag}">
+<div class="container ">
+<div class="row">
+<div class="col-md-5">
+
 <form action="InsertCatgory" method="post" enctype="multipart/form-data">
 
 
 <table m.addAttribute("flag",flag); align="center" cellspacing="3" class="table">
- <tr bgcolor="pink">
- 	<td colspan="2"><center><b>Manage Categories</b></center></td>
+ 	<legend class="text-center header">Manage Categories</legend>
  </tr> 
  
 	<tr>
@@ -60,17 +69,15 @@
 	<tr>
 		<td colspan="2">
 			<center>
-			<input type="submit" value="SUBMIT"/>
-			</center>
+<button type="submit" class="btn btn-primary btn-lg">Save</button>			</center>
 		</td>
 	</tr>
 	
 </table>
 </form>
-<br>
-<hr>
-<div class="container">
- 
+</div>
+
+ <div class="col-md-7 col-md-7-vl">
   <table class="table table-hover">
     <thead>
       <tr>
@@ -82,7 +89,7 @@
       </tr>
     </thead>
 
-</div>
+
 	
 	<c:forEach items="${categorylist}" var="category">
 	<tr>
@@ -98,7 +105,12 @@
 	</c:forEach>
 
 </table>
+</div>
+</div>
+</div>
+
 </c:if>
+
 
 </body>
 </html>

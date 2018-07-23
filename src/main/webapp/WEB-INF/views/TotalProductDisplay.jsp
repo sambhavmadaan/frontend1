@@ -6,7 +6,7 @@
 
 <tr>
 	<td rowspan="9">
-		<img src="<c:url value="/resources/images/${product.prodId}.jpg"/>" width="300" heigt="300">
+		<img src="<c:url value="/resources/images/${product.prodId}.jpg"/>" width="300" height="300">
 		</td>
 		</tr>
 <tr>
@@ -32,9 +32,9 @@
 	</tr>
 	<tr>
 	<td>Category</td>
-	<td>${CategoryName}</td>
+	<td>${categoryName}</td>
 	</tr>
-	<form action="<c:url value="/addToCart/${product.prodId}"/>" method="get">	<tr>
+	<form action="<c:url value="/cart/addToCart/${product.prodId}"/>" method="get">	<tr>
 	<td>Quantity</td>
 	<td>
 		<select name="quantity" class="form-control btn-block">

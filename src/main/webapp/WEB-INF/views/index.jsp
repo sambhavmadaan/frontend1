@@ -94,6 +94,33 @@
     margin-top: 7rem;
   }
 }
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 
 
@@ -169,6 +196,7 @@
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-6">
             <img class="rounded-circle" src="resources/images1/women.jpg" alt="Generic placeholder image" width="200" height="200">
+            
             <h2>WoMen</h2>
             <p>Women's watches with fabric, synthetic and plastic straps are meant to be worn as decorative watches. The straps with attractive designs add panache to your attire. Silver timepieces go well with any outfit. And when it comes to style, you can opt from elegant bracelet style timepieces</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
@@ -185,7 +213,11 @@
             <p class="lead">A smartwatch is a touchscreen wearable computer in the form of a wristwatch. Some smartwatches function as portable media players, with FM radio and playback of digital audio and video files via a Bluetooth or USB headset.</p>
           </div>
           <div class="col-md-5">
+          
             <img class="featurette-image img-fluid mx-auto" src="resources/images1/smartwatch1.jpg" alt="Generic placeholder image" >
+         <div class="overlay">
+    <div class="text">View More</div>
+  </div>
           </div>
         </div>
 

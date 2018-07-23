@@ -60,14 +60,13 @@
 </table>
 </form:form>
 </c:if> --%>
-
-<c:if test="${!flag}">
-
+<div class="container ">
+<div class="row">
+<div class="col-md-5">
 <form:form action="/frontend/ProductInsert" modelAttribute="product" method="post" enctype="multipart/form-data">
 
-<table align="center" cellspacing="3" class="table">
-	<tr bgcolor="pink">
-		<td colspan="2"><center><b>Manage Products</b></center></td>
+<table  cellspacing="3" class="table">
+	<legend class="text-center header">Manage Products</legend>
 	</tr>
 	
 	<tr>
@@ -112,20 +111,19 @@
 		<td><form:input type="file" path="pimage"/></td>
 	</tr>
 	<tr>
-		<td>
-			<center><input type="submit" value="Save"/></center>
-		</td>
+		
+		<td colspan="2">	<center>  <button type="submit" class="btn btn-primary btn-lg">Save</button></center></td>
 	</tr>
 
 </table>
 </form:form>
+</div>
 
-<br>
-<hr>
-</c:if>
-<c:if test="${!flag}">
-<div class="container">
- 
+
+
+
+ <div class="col-md-6">
+ <br>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -141,7 +139,7 @@
       </tr>
     </thead>
 
-</div>
+
 	
 	<c:forEach items="${productList}" var="product">
 	
@@ -162,7 +160,11 @@
 </td>
 </tr>
 </c:forEach>
-</table></c:if>
+
+</table>
+</div>
+</div>
+</div>
 
 
 

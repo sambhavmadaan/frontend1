@@ -27,8 +27,15 @@ public class CartController {
 	@Autowired
 	CartDAO cartDAO;
 
-	@RequestMapping(value="/addToCart/{prodId}")
+	@RequestMapping(value="/cart/addToCart/{prodId}")
 	public String addCartItem(@RequestParam("quantity") int quantity,@PathVariable("prodId") int prodId,HttpServletRequest request,Model m){
+	
+	//String username=(String)request.getUserPrincipal().getName();
+	/*	if((String)request.getUserPrincipal().getName()==null) {
+			return "login1";
+		}*/
+		String page;
+		if((String)request.getUserPrincipal().getName()!=null) {
 		Product product=productDAO.getProduct(prodId);
 		System.out.println(product.getPrice());
 		System.out.println(product.getCategoryId());
@@ -41,6 +48,7 @@ public class CartController {
 		System.out.println(quantity);
 
 		String username=(String)request.getUserPrincipal().getName();
+		System.out.println(username);
 		CartItem cartItem=new CartItem();
 		cartItem.setProdId(product.getProdId());
 		cartItem.setPrice(product.getPrice());
@@ -54,9 +62,18 @@ public class CartController {
 		List<CartItem> cartItems=cartDAO.showCartItems(username);
 		m.addAttribute("cartItems",cartItems);
 		m.addAttribute("totalPurchaseAmount",this.calcTotalPurchaseAmount(cartItems));
-		return "Cart";
-		
+		/*if(username=="null") {
+			return "login1";
+		}
+		else
+*/		page="Cart";
+		}
+		else if((String)request.getUserPrincipal().getName()==null){
+			page="login1";
+		}
+		return "page";
 	}
+	
 	@RequestMapping(value="/updateCartItem/{cartItemId}")
 	public String updateCartItem(@RequestParam("quantity") int quantity,@PathVariable("cartItemId") int cartItemId,HttpServletRequest request,Model m)
 	{
@@ -71,10 +88,10 @@ public class CartController {
 		return "Cart";
 	}
 	@RequestMapping(value="/deleteCartItem/{cartItemId}")
-	public String updateCartItem(@PathVariable("cartItemId") int cartItemId,HttpSession session,Model m)
+	public String deleteCartItem(@PathVariable("cartItemId") int cartItemId,HttpServletRequest request,Model m)
 	{
 		CartItem cartItem=cartDAO.getCartItem(cartItemId);
-		String username=(String)session.getAttribute("username");
+		String username=(String)request.getUserPrincipal().getName();
 
 		cartDAO.deleteCartItem(cartItem);
 		List<CartItem> cartItems=cartDAO.showCartItems(username);

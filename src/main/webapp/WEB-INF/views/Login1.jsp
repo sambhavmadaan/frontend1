@@ -6,13 +6,13 @@
 <%@include file="Header.jsp" %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <style type="text/css">
-body  {
+/* body  {
    background: url("resources/images1/background4.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
 } 
-
+ */
 .header {
 		/* background: url("resources/images1/background3.jpg");
    background-size: cover;
@@ -32,12 +32,14 @@ body  {
 
 
 <body>
-<br>
+
 <div class="container ">
 
     <div class="row" align="center">
         <!-- <div class="col-md-3">
- --> -->        <!-- </div> -->
+ -->        <!-- </div> -->
+        <div class="col-md-6">
+        </div>
         <div class="col-md-6">
             <div class="well well-sm">
                 <!-- <form class="form-horizontal" method="post"> -->
@@ -58,15 +60,17 @@ body  {
                         <!-- <div class="form-group"> -->
                             <div class="col-md-12 text-center">
                                 <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                                <input type="button" class="btn btn-lg btn-add-to-cart" class="btn btn-info" value="Forgot password?!" onclick="location.href = 'totalProductInfo/${product.prodId}';">
                             </div>
-                            <div class="col-md-12 text-center">
-                               <input type="button" class="btn btn-lg btn-add-to-cart" class="btn btn-info" value="Forget password?!" onclick="location.href = 'totalProductInfo/${product.prodId}';">
-                        </div>
+                           
                     </form>
                     </fieldset>
                     
                 <!-- </form> -->
             </div>
+            <hr>
+            <h8>New to WatchStore.?</h8><br>
+            <input type="button" class="btn btn-primary btn-lg" class="btn btn-info" value="Click here to Register" onclick="location.href = '/frontend/register';">
         </div>
         <div class="col-md-3">
         </div>

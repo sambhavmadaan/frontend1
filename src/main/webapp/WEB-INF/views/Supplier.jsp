@@ -39,11 +39,14 @@
 
 </c:if>
 <c:if test="${!flag}">
+<div class="container ">
+<div class="row">
+<div class="col-md-5">
 <form action="InsertSupplier" method="post" enctype="multipart/form-data">
 
 <table m.addAttribute("flag",flag); align="center" cellspacing="3" class="table">
  <tr bgcolor="pink">
- 	<td colspan="2"><center><b>Manage Suppliers</b></center></td>
+	<legend class="text-center header">Manage Supppliers</legend>
  </tr> 
 	<tr>
 		<td>Supplier Name</td>
@@ -61,15 +64,16 @@
 	<tr>
 		<td colspan="2">
 			<center>
-			<input type="submit" value="SUBMIT"/>
+			<button type="submit" class="btn btn-primary btn-lg">Save</button>
 			</center>
 		</td>
 	</tr>
 	
 </table>
 </form>
+</div>
 
-<div class="container">
+<div class="col-md-7">
  
   <table class="table table-hover">
     <thead>
@@ -84,7 +88,7 @@
       </tr>
     </thead>
 
-</div>
+
 
 	
 	<c:forEach items="${supplierlist}" var="supplier">
@@ -99,8 +103,11 @@
 			<a href="<c:url value='/editSupplier/${supplier.suppId}'/>">Edit</a>
 	</tr>
 	</c:forEach>
+</div>
 
 </table>
+</div>
+</div>
 </c:if>
 
 </body>

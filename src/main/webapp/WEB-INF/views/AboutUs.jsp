@@ -21,13 +21,13 @@
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 <style type="text/css">
-body  {
+/* body  {
    background: url("resources/images1/background4.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
 } 
-/*!
+ *//*!
  * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
@@ -68,7 +68,7 @@ body  {
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3"><font color="white"><u>theWatchStore</u></font><font color="red">.</font>
+      <h1 class="mt-4 mb-3"><u>theWatchStore</u></font><font color="red">.</font>
         <small></small>
       </h1>
 
@@ -84,8 +84,8 @@ body  {
         <div class="col-lg-6">
           
       <h2><font color="white"><b>About Modern Business</b></font></h2>
-          <p><b><font color="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</font></b></p>
-          <p><b><font color="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</font></b></p>
+          <p><b><font >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</font></b></p>
+          <p><b><font >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</font></b></p>
         </div>
         <div class="col-lg-6">
           <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
