@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html" %>
-<%@include file="Admin.jsp" %>
+<%@include file="Admin1.jsp" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <title>Supplier </title>

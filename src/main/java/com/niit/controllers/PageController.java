@@ -60,7 +60,7 @@ public class PageController {
 		return "AboutUs";
 	}
 	@RequestMapping(value="/admin")
-	public String showAdmin(){
+	public String showAdmin(Model m){
 		
 		return "Admin";
 	}

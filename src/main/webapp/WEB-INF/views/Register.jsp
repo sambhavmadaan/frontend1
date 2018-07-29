@@ -7,13 +7,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <style type="text/css">
-/* body  {
-   background: url("resources/images1/background4.jpg");
+body  {
+   background: url("resources/images1/background.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
 } 
- */
+ 
 .header {
 		/* background: url("resources/images1/background3.jpg");
    background-size: cover;
@@ -33,27 +33,25 @@
 
 
 <body>
-
-<div class="col-md-5">
- </div>
- 
-
+<div class="container">
+<ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/frontend/home">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/frontend/login1">Sign In</a>
+        </li>
+        
+        <li class="breadcrumb-item active">Sign Up</li>
+      </ol>
+</div>
 
 <div class="container ">
-
-<!--     <div class="row" align="center">
- -->        <!-- <div class="col-md-3">
- -->      <!-- </div> -->
-      <!--   <div class="col-md-6">
-            <div class="well well-sm">
- -->
+<div class="row">
+  <div class="col-md-6">
+  </div>
+  <div class="col-md-6">
  <form:form action="/frontend/Register" modelAttribute="userDetail" method="post">                    <fieldset>
-  <!-- <legend class="text-center header">Create Account</legend> -->
-<!--                         <div class="form-group">
- -->
-<!--                             <div class="col-md-10 col-md-offset-1">
- -->
- <div class="col-md-6">
   <legend class="text-center header">Sign In</legend>
  <table>
  			<tr>User Name<form:input path="userName" type="text" placeholder="User Name" class="form-control"></form:input></tr>
@@ -103,7 +101,7 @@
                             <div class="col-md-10 col-md-offset-1">
  -->          
  <tr>password</tr>
- <form:input path="password" name="password" type="text" placeholder="Password" class="form-control"></form:input>
+ <form:input path="password" name="password" type="text" placeholder="Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
                            <!--  </div>
                         </div> -->
 						<!-- <div class="form-group">
@@ -126,22 +124,21 @@
            
                        <br>
               <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                       <!--      </div>
-                        </div>
-                    </fieldset>
-                
-            </div>
-        </div>
-        <div class="col-md-3">
-        </div>
-       -->
+          
     </table>
         </form:form>
        </div>
         </div>
-       
+       </div>
+      
         
   
         <br><br><br><br>
+         <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; theWatchStore 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 </body>
 </html>

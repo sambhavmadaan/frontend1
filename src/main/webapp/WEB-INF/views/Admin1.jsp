@@ -154,7 +154,7 @@
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<c:url value='/home'/>"><u>theWatchStore</u><font color="red">.</font></a>
-      <input class="form-control form-control-dark w-100" type="text"  >
+      <input class="form-control form-control-dark w-100" type="text">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <a class="nav-link" href="<c:url value='/logout'/>">Sign out</a>
@@ -207,73 +207,12 @@
             <div class="btn-toolbar mb-2 mb-md-0">
             </div>
           </div>
-          <div class="row">
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-primary o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-comments"></i>
-                  </div>
-                  <div class="mr-5">Manage Suppliers</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="<c:url value='/supplier'/>">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-warning o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-list"></i>
-                  </div>
-                  <div class="mr-5">Manage Products</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="<c:url value='/product'/>">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-success o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-shopping-cart"></i>
-                  </div>
-                  <div class="mr-5">Manage Categories</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="<c:url value='/category'/>">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-danger o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-life-ring"></i>
-                  </div>
-                  <div class="mr-5">Manage Coupons</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="<c:url value='/coupon'/>">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-                    
+          
+          
+          
+          
+          
+          
               
 
    <%--        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>

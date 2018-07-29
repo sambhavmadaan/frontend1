@@ -6,13 +6,13 @@
 <%@include file="Header.jsp" %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <style type="text/css">
-/* body  {
-   background: url("resources/images1/background4.jpg");
+ body  {
+   background: url("resources/images1/background.jpg");
    background-size: cover;
    padding: 0;
    margin: 0;
 } 
- */
+ 
 .header {
 		/* background: url("resources/images1/background3.jpg");
    background-size: cover;
@@ -32,7 +32,14 @@
 
 
 <body>
-
+<div class="container ">
+<ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/frontend/home">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Sign In</li>
+      </ol>
+</div>
 <div class="container ">
 
     <div class="row" align="center">
@@ -53,7 +60,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
-                                <input id="password" name="password" type="text" placeholder="Password" class="form-control">
+                                <input id="password" name="password" placeholder="Password" type="password" class="form-control">
                             </div>
                         </div>
 
@@ -69,7 +76,7 @@
                 <!-- </form> -->
             </div>
             <hr>
-            <h8>New to WatchStore.?</h8><br>
+            <legend class="text-center header">New to WatchStore.?</legend>
             <input type="button" class="btn btn-primary btn-lg" class="btn btn-info" value="Click here to Register" onclick="location.href = '/frontend/register';">
         </div>
         <div class="col-md-3">
@@ -80,6 +87,12 @@
         
   
         <br><br><br><br>
+        <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; theWatchStore 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 </body>
 </html>
  

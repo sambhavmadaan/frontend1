@@ -1,5 +1,5 @@
 <head>
-<%@include file="Admin.jsp" %>
+<%@include file="Admin1.jsp" %>
 <%@ page language="java" contentType="text/html" %>
 <%-- <%@include file="Header.jsp" %> --%>
 <%@ page isELIgnored="false" %>

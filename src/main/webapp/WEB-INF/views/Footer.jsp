@@ -19,7 +19,7 @@
 <style type="text/css">
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/* html {
   position: relative;
   min-height: 100%;
 }
@@ -34,18 +34,18 @@ body {
   line-height: 60px; /* Vertically center the text there */
   background-color: #f5f5f5;
 }
-
+ */
 
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-.container {
+/* .container {
   width: auto;
   max-width: 680px;
   padding: 0 15px;
 }
-
+ */
 
 </style>
   </head>
@@ -53,11 +53,13 @@ body {
   <body>
 
     <!-- Begin page content -->
-
-    <footer class="footer footer-dark bg-dark">
+</body>
+<footer class="py-5 bg-dark" style="background-color: #e3f2fd;">
       <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <p class="m-0 text-center text-white">Copyright &copy; theWatchStore 2019</p>
       </div>
+      <!-- /.container -->
     </footer>
-  </body>
+
+ 
 </html>

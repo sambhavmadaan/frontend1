@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html" %>
 <%@include file="Header.jsp" %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
+<hr>
 <div class="container">
 <table class="table">
 
 <tr>
 	<td rowspan="9">
-		<img src="<c:url value="/resources/images/${product.prodId}.jpg"/>" width="300" height="300">
+		<img src="<c:url value="/resources/images1/product/${product.prodId}.jpg"/>" width="300" height="300">
 		</td>
 		</tr>
 <tr>
@@ -34,7 +36,7 @@
 	<td>Category</td>
 	<td>${categoryName}</td>
 	</tr>
-	<form action="<c:url value="/cart/addToCart/${product.prodId}"/>" method="get">	<tr>
+	<form action="<c:url value="/addToCart/${product.prodId}"/>" method="get">	<tr>
 	<td>Quantity</td>
 	<td>
 		<select name="quantity" class="form-control btn-block">
@@ -55,3 +57,6 @@
 
 
 </div>
+<br><br><br><br><br><br><br>
+ 
+<%@include file="Footer.jsp" %>

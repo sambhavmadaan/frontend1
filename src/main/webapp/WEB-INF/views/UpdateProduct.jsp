@@ -14,6 +14,11 @@
 	</tr>
 	
 	<tr>
+		
+		<td><form:input path="prodId" type="hidden" /></td>
+	</tr>
+	
+	<tr>
 		<td>Product Name</td>
 		<td><form:input path="prodName"/></td>
 	</tr>

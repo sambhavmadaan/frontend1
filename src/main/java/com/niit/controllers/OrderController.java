@@ -45,10 +45,11 @@ public class OrderController {
 	
 	@RequestMapping("/payment")
 	public String paymentProcess(Model m,HttpServletRequest request){
-		
+		List<Coupon> coupon=couponDAO.listcoupon();
 		String username=(String)request.getUserPrincipal().getName();
 		List<CartItem> cartItems=cartDAO.showCartItems(username);
 		m.addAttribute("cartItems", cartItems);
+		m.addAttribute("coupon", coupon);
 		m.addAttribute("totalPurchasedAmount", this.calcTotalPurchaseAmount(cartItems));
 		return "Payment";
 		

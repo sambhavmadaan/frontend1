@@ -153,9 +153,8 @@
             <img class="second-slide" src="resources/images1/watches-116a.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Another example headline.</h1>
+               
                 <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> -->
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -163,9 +162,9 @@
             <img class="third-slide" src="resources/images1/watches-117a.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
+                
 <!--                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
- -->                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+ -->                
               </div>
             </div>
           </div>
@@ -192,14 +191,14 @@
             <img class="rounded-circle" src="resources/images1/menwatch.jpg" alt="Generic placeholder image" width="200" height="200">
             <h2>Men</h2>
             <p>Men's watches are often worn as style adornments. Whether you are an office goer, a college going teenager or an established man, you cannot deny the satisfaction you get after donning the attractive timepiece on your wrist. Choose a strap material based on your comfort and one that complements your skin tone.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View more &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="/frontend/GetProductByCategory/556" role="button">View more &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-6">
             <img class="rounded-circle" src="resources/images1/women.jpg" alt="Generic placeholder image" width="200" height="200">
             
             <h2>WoMen</h2>
             <p>Women's watches with fabric, synthetic and plastic straps are meant to be worn as decorative watches. The straps with attractive designs add panache to your attire. Silver timepieces go well with any outfit. And when it comes to style, you can opt from elegant bracelet style timepieces</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="/frontend/GetProductByCategory/557" role="button">View more &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
     </div>
 
@@ -209,15 +208,13 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><b>Smart </b><span class="text-muted"><font color="white">Watches</font></span></h2>
+            <h2 class="featurette-heading"><b>Smart </b><span class="text-muted">Watches</span></h2>
             <p class="lead">A smartwatch is a touchscreen wearable computer in the form of a wristwatch. Some smartwatches function as portable media players, with FM radio and playback of digital audio and video files via a Bluetooth or USB headset.</p>
           </div>
           <div class="col-md-5">
           
             <img class="featurette-image img-fluid mx-auto" src="resources/images1/smartwatch1.jpg" alt="Generic placeholder image" >
-         <div class="overlay">
-    <div class="text">View More</div>
-  </div>
+         
           </div>
         </div>
 
@@ -310,5 +307,7 @@
     </div>
     </div>
     <br><br><br><br> <br><br><br><br><br><br>
+<%@include file="/WEB-INF/views/Footer.jsp" %>
+
 </body>
 </html>

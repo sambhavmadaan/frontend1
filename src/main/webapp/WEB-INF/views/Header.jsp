@@ -133,7 +133,7 @@ body{
  </head>
 
   <body>
-   <nav class="navbar navbar-light" style="background-color: #e3f2fd;"">
+   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       
      
 <div>
@@ -143,7 +143,11 @@ body{
 					<a href="#" class=" fa fa-pinterest-p"></a>
 					<a href="#" class=" fa fa-snapchat-ghost"></a>
 					<a href="#" class=" fa fa-youtube-play"></a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp					
+<a class="navbar-brand" href="<c:url value='/home'/>"><b><font color="black"><u>theWatchStore</font></u></b><font color="red">.</font></a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNow Get upto 80% Discount!
 				</div>
+				
  <!-- <div class="search-text"> 
    <div class="container">
         <div class="row">
@@ -157,11 +161,12 @@ body{
    </div>     
 </div>
   -->  
-     <form class="form-inline" align="center">
+  
+     <!-- <form class="form-inline col-md-8" align="center">
           <input class="form-control " type="text" placeholder="Search" aria-label="Search" >
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-
+ -->
  <!-- <div class="container">
 	<div class="row">
            <div id="custom-search-input">
@@ -181,9 +186,8 @@ body{
  
  
    </nav>
-    <nav class="navbar navbar-expand-md "  >
-         <a class="navbar-brand" href="<c:url value='/home'/>"><b><font color="black">&nbsp&nbsp&nbsp&nbsp<u>theWatchStore</font></u></b><font color="red">.</font></a>
-    
+    <nav class="navbar navbar-expand-md " style="background-color: #e3f2fd;"  >
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -227,10 +231,12 @@ body{
       </c:if>
       
       <c:if test="${pageContext.request.userPrincipal.name!=null }">
+           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
            <li class="nav-item">
+           
             <a class="nav-link">WELCOME: ${pageContext.request.userPrincipal.name}</a>
-          </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <img src="resources/images1/cart.jpg" width="40" height="40"></img>
+          </li>
+            <a href="/frontend/viewcart"><img src="resources/images1/cart.jpg"  width="40" height="40"></a>
            <%--  <li class="nav-item">
 			<a class="nav-link" href="<c:url value='/logout'/>">Cart</a>          </li>
           --%> </c:if>
@@ -245,6 +251,7 @@ body{
         </ul>
               </div>
     </nav>
+    
 	    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>

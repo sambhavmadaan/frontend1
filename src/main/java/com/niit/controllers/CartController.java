@@ -27,15 +27,15 @@ public class CartController {
 	@Autowired
 	CartDAO cartDAO;
 
-	@RequestMapping(value="/cart/addToCart/{prodId}")
+	@RequestMapping(value="addToCart/{prodId}")
 	public String addCartItem(@RequestParam("quantity") int quantity,@PathVariable("prodId") int prodId,HttpServletRequest request,Model m){
 	
 	//String username=(String)request.getUserPrincipal().getName();
 	/*	if((String)request.getUserPrincipal().getName()==null) {
 			return "login1";
 		}*/
-		String page;
-		if((String)request.getUserPrincipal().getName()!=null) {
+	
+		
 		Product product=productDAO.getProduct(prodId);
 		System.out.println(product.getPrice());
 		System.out.println(product.getCategoryId());
@@ -62,16 +62,8 @@ public class CartController {
 		List<CartItem> cartItems=cartDAO.showCartItems(username);
 		m.addAttribute("cartItems",cartItems);
 		m.addAttribute("totalPurchaseAmount",this.calcTotalPurchaseAmount(cartItems));
-		/*if(username=="null") {
-			return "login1";
-		}
-		else
-*/		page="Cart";
-		}
-		else if((String)request.getUserPrincipal().getName()==null){
-			page="login1";
-		}
-		return "page";
+		
+		return "Cart";
 	}
 	
 	@RequestMapping(value="/updateCartItem/{cartItemId}")
@@ -87,6 +79,19 @@ public class CartController {
 		m.addAttribute("totalPurchaseAmount",this.calcTotalPurchaseAmount(cartItems));
 		return "Cart";
 	}
+	@RequestMapping(value="/viewcart")
+	public String showCartPage(HttpServletRequest request,Model m)
+	{
+		String username=(String)request.getUserPrincipal().getName();
+		List<CartItem> cartItems=cartDAO.showCartItems(username);
+		m.addAttribute("cartItems",cartItems);
+		m.addAttribute("totalPurchaseAmount",this.calcTotalPurchaseAmount(cartItems));
+		
+		return "Cart";
+
+	}
+	
+	
 	@RequestMapping(value="/deleteCartItem/{cartItemId}")
 	public String deleteCartItem(@PathVariable("cartItemId") int cartItemId,HttpServletRequest request,Model m)
 	{

@@ -132,6 +132,7 @@ public class ProductController {
 		
 	}
 	
+	
 	@RequestMapping(value="/editProduct/{prodId}")
 	public String editProduct(@PathVariable("prodId")int prodId,Model m){
 		flag=true;
